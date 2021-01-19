@@ -1,0 +1,1 @@
+{"cpu":false,"memory":false,"storage":false,"gpu":false,"power":false,"fan":false}
