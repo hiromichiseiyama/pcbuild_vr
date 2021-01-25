@@ -1,9 +1,12 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - ActiveStateToggler
     - CharacterCameraConstraint
     - CharacterCapsule
+    - Connect
     - DebugUIBuilder
+    - GenerateManager
     - HandedInputSelector
     - LaserPointer
     - LocomotionController
@@ -11,11 +14,12 @@ ScriptsOnlyBuild:
     - ONSPSettings
     - OVRTouchSample.Hand
     - OVRTouchSample.HandPose
-    - OculusSampleFramework.DistanceGrabbable
     - OculusSampleFramework.DistanceGrabber
     - OculusSampleFramework.DistanceGrabberSample
     - OculusSampleFramework.GrabManager
+    - SaveManager
     - SimpleCapsuleWithStickMovement
+    - SoundEffect
     - TeleportAimHandlerLaser
     - TeleportAimHandlerParabolic
     - TeleportAimVisualLaser
@@ -31,18 +35,23 @@ ScriptsOnlyBuild:
     - TeleportTransitionBlink
     - TeleportTransitionInstant
     - TeleportTransitionWarp
+    - Tenkey
     Oculus.VR.Editor.dll:
     - Assets.Oculus.VR.Editor.OVRPlatformToolSettings
     - OVRConfig
     Oculus.VR.dll:
     - OVRCameraRig
     - OVRDebugInfo
+    - OVRGrabbable
+    - OVRGrabber
+    - OVRHeadsetEmulator
     - OVRManager
     - OVRRaycaster
     - OVRScreenFade
     - UnityEngine.EventSystems.OVRInputModule
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.UI.Button
@@ -55,7 +64,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Text
     - UnityEngine.UI.Toggle
   sceneClasses:
-    Assets/Scenes/demo.unity:
+    Assets/tmpFile/scene.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -86,6 +95,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 90
       Script: {instanceID: 0}
     - Class: 91
@@ -99,101 +112,117 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9834}
+      Script: {instanceID: 9836}
     - Class: 114
-      Script: {instanceID: 9908}
+      Script: {instanceID: 9910}
     - Class: 114
-      Script: {instanceID: 10052}
+      Script: {instanceID: 10058}
     - Class: 114
-      Script: {instanceID: 10072}
+      Script: {instanceID: 10078}
     - Class: 114
-      Script: {instanceID: 10128}
+      Script: {instanceID: 10134}
     - Class: 114
-      Script: {instanceID: 10154}
+      Script: {instanceID: 10160}
     - Class: 114
-      Script: {instanceID: 10184}
+      Script: {instanceID: 10190}
     - Class: 114
-      Script: {instanceID: 10304}
+      Script: {instanceID: 10310}
     - Class: 114
-      Script: {instanceID: 10350}
+      Script: {instanceID: 10352}
     - Class: 114
-      Script: {instanceID: 10382}
+      Script: {instanceID: 10358}
     - Class: 114
-      Script: {instanceID: 10418}
+      Script: {instanceID: 10390}
     - Class: 114
-      Script: {instanceID: 10598}
+      Script: {instanceID: 10426}
     - Class: 114
-      Script: {instanceID: 10694}
+      Script: {instanceID: 10550}
     - Class: 114
-      Script: {instanceID: 10702}
+      Script: {instanceID: 10608}
+    - Class: 114
+      Script: {instanceID: 10706}
     - Class: 114
       Script: {instanceID: 10714}
     - Class: 114
-      Script: {instanceID: 10842}
+      Script: {instanceID: 10726}
     - Class: 114
-      Script: {instanceID: 10860}
+      Script: {instanceID: 10836}
     - Class: 114
-      Script: {instanceID: 10936}
+      Script: {instanceID: 10854}
     - Class: 114
-      Script: {instanceID: 10962}
+      Script: {instanceID: 10872}
     - Class: 114
-      Script: {instanceID: 11076}
+      Script: {instanceID: 10948}
     - Class: 114
-      Script: {instanceID: 11080}
+      Script: {instanceID: 10974}
     - Class: 114
-      Script: {instanceID: 11086}
+      Script: {instanceID: 11090}
     - Class: 114
-      Script: {instanceID: 11142}
+      Script: {instanceID: 11094}
     - Class: 114
-      Script: {instanceID: 11170}
+      Script: {instanceID: 11100}
     - Class: 114
-      Script: {instanceID: 11226}
+      Script: {instanceID: 11158}
     - Class: 114
-      Script: {instanceID: 11228}
+      Script: {instanceID: 11242}
     - Class: 114
-      Script: {instanceID: 11248}
+      Script: {instanceID: 11244}
     - Class: 114
-      Script: {instanceID: 11290}
+      Script: {instanceID: 11254}
     - Class: 114
-      Script: {instanceID: 11294}
+      Script: {instanceID: 11264}
     - Class: 114
-      Script: {instanceID: 11312}
+      Script: {instanceID: 11266}
     - Class: 114
-      Script: {instanceID: 11414}
+      Script: {instanceID: 11308}
     - Class: 114
-      Script: {instanceID: 11418}
+      Script: {instanceID: 11310}
     - Class: 114
-      Script: {instanceID: 11544}
+      Script: {instanceID: 11314}
     - Class: 114
-      Script: {instanceID: 11596}
+      Script: {instanceID: 11332}
     - Class: 114
-      Script: {instanceID: 11732}
+      Script: {instanceID: 11434}
     - Class: 114
-      Script: {instanceID: 11762}
+      Script: {instanceID: 11438}
     - Class: 114
-      Script: {instanceID: 11954}
+      Script: {instanceID: 11568}
     - Class: 114
-      Script: {instanceID: 12004}
+      Script: {instanceID: 11620}
     - Class: 114
-      Script: {instanceID: 12072}
+      Script: {instanceID: 11756}
     - Class: 114
-      Script: {instanceID: 12082}
+      Script: {instanceID: 11786}
     - Class: 114
-      Script: {instanceID: 12084}
+      Script: {instanceID: 11978}
     - Class: 114
-      Script: {instanceID: 12352}
+      Script: {instanceID: 12028}
     - Class: 114
-      Script: {instanceID: 12360}
+      Script: {instanceID: 12096}
     - Class: 114
-      Script: {instanceID: 12410}
+      Script: {instanceID: 12106}
     - Class: 114
-      Script: {instanceID: 12484}
+      Script: {instanceID: 12108}
     - Class: 114
-      Script: {instanceID: 12504}
+      Script: {instanceID: 12126}
+    - Class: 114
+      Script: {instanceID: 12378}
+    - Class: 114
+      Script: {instanceID: 12386}
+    - Class: 114
+      Script: {instanceID: 12436}
+    - Class: 114
+      Script: {instanceID: 12512}
     - Class: 114
       Script: {instanceID: 12532}
     - Class: 114
-      Script: {instanceID: 12534}
+      Script: {instanceID: 12560}
+    - Class: 114
+      Script: {instanceID: 12562}
+    - Class: 114
+      Script: {instanceID: 12590}
+    - Class: 114
+      Script: {instanceID: 185442}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -317,6 +346,12 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
+      Hash: 7e6f3cec810b51366c6e857ffaf3cdbc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PanelManager
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -345,6 +380,12 @@ ScriptsOnlyBuild:
     assemblyName: Oculus.VR.dll
     namespaceName: 
     className: OVRDebugHeadController
+  - hash:
+      serializedVersion: 2
+      Hash: 51f8d470cac09a8e32d2d547963d8efc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ResizePanel
   - hash:
       serializedVersion: 2
       Hash: a5781dc71a671b1ad2b38de19f24b71f
@@ -533,6 +574,12 @@ ScriptsOnlyBuild:
     className: OvrAvatarSDKManager
   - hash:
       serializedVersion: 2
+      Hash: 43e21f918ee403ae6880c431ec0571f9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GenerateManager
+  - hash:
+      serializedVersion: 2
       Hash: e7dac3c9100823d6e750582bb7d6b5f8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -642,6 +689,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ActiveStateToggler
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Oculus.VR.dll
     namespaceName: 
     className: OVRResources
@@ -711,6 +764,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: OVR
     className: AudioManager
+  - hash:
+      serializedVersion: 2
+      Hash: a72b59fc029116362b3317d54b5ec7e0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TiltWindow
   - hash:
       serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
@@ -959,6 +1018,12 @@ ScriptsOnlyBuild:
     className: OVRResetOrientation
   - hash:
       serializedVersion: 2
+      Hash: 699582968bf572a4f5f4654f266dca73
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DropMe
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Oculus.Platform.dll
     namespaceName: Oculus.Platform.Samples.VrHoops
@@ -1035,6 +1100,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: OculusSampleFramework
     className: ColorGrabbable
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ShowSliderValue
   - hash:
       serializedVersion: 2
       Hash: 6d39c48b69b486476ba524949d845693
@@ -1133,6 +1204,12 @@ ScriptsOnlyBuild:
     className: TeleportAimVisualLaser
   - hash:
       serializedVersion: 2
+      Hash: 01b3a7589e1f3e4a2d47b9720405f782
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Connect
+  - hash:
+      serializedVersion: 2
       Hash: c62775f7279ea30b4981a8322d28585a
     assemblyName: Oculus.Platform.dll
     namespaceName: Oculus.Platform.Samples.NetChat
@@ -1149,6 +1226,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CharacterCapsule
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Tenkey
   - hash:
       serializedVersion: 2
       Hash: 5f1752ed2092162f016c19510c28a8b9
@@ -1277,10 +1360,22 @@ ScriptsOnlyBuild:
     className: LocalPlayer
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DragPanel
+  - hash:
+      serializedVersion: 2
       Hash: 9f7fd5f1cdce7cb0cbd6b8430ff831c1
     assemblyName: Oculus.Platform.dll
     namespaceName: Oculus.Platform.Samples.VrBoardGame
     className: EyeCamera
+  - hash:
+      serializedVersion: 2
+      Hash: 369421eaa26a31b7617fb067c6e27c2e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DragMe
   - hash:
       serializedVersion: 2
       Hash: 9e5b79eaffb4a828a08c59fb1d2f2d1a
@@ -1601,6 +1696,12 @@ ScriptsOnlyBuild:
     className: MarkerTrack
   - hash:
       serializedVersion: 2
+      Hash: 09fe53f599e1b043b2ab790cced57532
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ScrollDetailTexture
+  - hash:
+      serializedVersion: 2
       Hash: b5be90544603fd5604bfcc31deb77313
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1745,6 +1846,12 @@ ScriptsOnlyBuild:
     className: TMP_SubMesh
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ApplicationManager
+  - hash:
+      serializedVersion: 2
       Hash: 20eeaeae829475b5e354d1f626c51a2b
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner
@@ -1835,6 +1942,18 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ChangeColor
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SaveManager
+  - hash:
+      serializedVersion: 2
       Hash: 18235af34262c9d1c806370a73196694
     assemblyName: Assembly-CSharp.dll
     namespaceName: OculusSampleFramework
@@ -1845,7 +1964,19 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: b36e8cdafe3d2d17848f35450cc5a1ae
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ActivatePointer
+  - hash:
+      serializedVersion: 2
+      Hash: 3c8a006c2fa64ee72e41eac127ddd14f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SoundEffect
   platform: 13
   scenePathNames:
-  - Assets/Scenes/demo.unity
+  - Assets/tmpFile/scene.unity
   playerPath: C:/Users/seiyama/PCBUILD/pcbuild.apk

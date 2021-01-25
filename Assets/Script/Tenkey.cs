@@ -51,21 +51,39 @@ public class Tenkey : MonoBehaviour
         UpdateText();
     }
 
-    public void OpenFile()
+    public void CreateFile(GameObject obj)
+    {
+        SaveManager ins = new SaveManager();
+        var text = string.Join("", fname);
+        //SaveManager.fname = text + ".txt";
+        SaveManager.Updatefname(text);
+        ins.WriteJson();
+
+        ActivateMainCanvas(obj);
+    }
+
+    public void OpenFile(GameObject obj)
     {
         //string text = inputtext.text;
         string text= string.Join("", fname);
-        var path = Application.dataPath + "/" + text+ ".txt";
+        var path = Application.persistentDataPath + "/" + text + ".txt";
+        //var path = Application.dataPath + "/" + text+ ".txt";
         //Debug.Log(fname.Count.ToString());
 
         if (File.Exists(path))
         {
-            SaveManager.fname = text+".txt";
-
+            //SaveManager.fname = text+".txt";
+            SaveManager.Updatefname(text);
+            ActivateMainCanvas(obj);
         }
         else
         {
             Debug.Log("ファイルが存在しません");
         }
+    }
+
+    public void ActivateMainCanvas(GameObject obj)
+    {
+        obj.SetActive(true);
     }
 }

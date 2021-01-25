@@ -158,7 +158,7 @@ public class SaveManager : MonoBehaviour
 {    
     SaveData savedata = new SaveData();
     public static string fname = "16221.txt";
-    Dictionary<string, bool> flag = new Dictionary<string, bool>();
+    static Dictionary<string, bool> flag = new Dictionary<string, bool>();
 
     void Start()
     {
@@ -169,6 +169,17 @@ public class SaveManager : MonoBehaviour
         flag.Add("gpu", false);
         flag.Add("power", false);
         flag.Add("fan", false);
+    }
+
+    public void UpdateFlag(string name)
+    {
+        flag[name] = true;
+        Debug.Log(flag);
+    }
+
+    public static void Updatefname(string name)
+    {
+        fname = name + ".txt";
     }
 
     public void Test()
@@ -207,13 +218,15 @@ public class SaveManager : MonoBehaviour
         data.fan = values[5];
     }
 
-    public void WriteJson(Dictionary<string,bool> dict)
+    public void WriteJson()
     {
         //dict内の値をクラスに書き込む
-        Interconversion(savedata,dict);
-        savedata.Dump(dict);
+        //Interconversion(savedata,dict);
+        Interconversion(savedata,flag);
+        //savedata.Dump(dict);
         var json = JsonUtility.ToJson(savedata);
-        var path = Application.dataPath + "/" + fname;
+        //var path = Application.dataPath + "/" + fname;
+        var path = Application.persistentDataPath + "/" + fname;
         StreamWriter writer = new StreamWriter(path,false);
         writer.WriteLine(json);
         writer.Flush();
@@ -251,7 +264,7 @@ public class SaveManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.W))
         {
-            WriteJson(flag);
+            WriteJson();
         }
 
         if (Input.GetKeyDown(KeyCode.R))
