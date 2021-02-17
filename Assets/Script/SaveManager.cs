@@ -182,6 +182,11 @@ public class SaveManager : MonoBehaviour
         fname = name + ".txt";
     }
 
+    public void End()
+    {
+        Application.Quit();
+    }
+
     public void Test()
     {
         List<string> names = new List<string>();
